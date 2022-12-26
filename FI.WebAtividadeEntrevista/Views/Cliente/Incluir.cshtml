@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Cadastrar Cliente";
+}
+@section scripts{
+    <script>
+        var benefTableId = []
+        var urlPost = '@Url.Action("Incluir", "Cliente", new { area = "" })';
+        var urlBenefPost = '@Url.Action("Incluir", "Beneficiario", new { area = "" })';
+    </script>
+    @Scripts.Render("~/bundles/clientes")
+    @Scripts.Render("~/bundles/beneficiario")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/scripts/inputmask/jquery.inputmask.js"></script>
+}
+<h2>@Html.Raw(ViewBag.Title)</h2>
+@Html.Partial("Forms")
